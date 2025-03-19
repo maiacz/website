@@ -21,6 +21,8 @@ Currently, I have a paper in prep that I am aiming to publish by Spring 2026.
 
 ### Take a look at some of my other projects:
 [COVID-19 Vaccine Efficacy Study Statistical Replication](https://www.maiacz.com/Stat342_Final_Report.pdf)
+[Modeling California Wildfire Data](https://STAT423_Final_Report.pdf)
+[Taylor Swift Song Data k-Means Clustering](https://www.maiacz.com/TaylorSwiftSOngDataClustering.pdf)
 
 ### Contact
 Email me! maiacz(at)outlook.com
