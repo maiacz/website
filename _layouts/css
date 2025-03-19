@@ -1,0 +1,37 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+#sidebar {
+    width: 300px;
+    float: left;
+    background: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.profile-image {
+    width: 100%; /* Responsive image width */
+    border-radius: 50%; /* Circular image */
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    margin: 5px 0;
+    background: #ddd;
+}
