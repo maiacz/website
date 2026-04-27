@@ -1,6 +1,6 @@
 ---
 preview_alt: 'ASCC abstract thumbnail'
-title: "ASCC Abstract — Gihm & SeHoon"
+title: "ASCC Abstract"
 date: 2025-04-01
 role: "Co-author"
 tech:
@@ -10,7 +10,8 @@ tags:
   - abstract
   - ASCC
   - contamination-control
-summary: "Abstract published at the Asian Symposium for Contamination Control (ASCC). Co-authored research on contamination detection and mitigation approaches."
+summary: "Abstract published at the Asian Symposium for Contamination Control (ASCC) in collaboration with AweXome Ray, focusing on contamination detection and mitigation strategies."
+  featured: true
 preview_image: /assets/images/ascc-abstract.jpg
 assets:
   - /assets/files/2025ASCC_Abstract_GihmSeHoon.pdf

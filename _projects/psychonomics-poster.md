@@ -9,6 +9,7 @@ tags:
   - poster
   - psychonomics
 summary: "Poster summarizing an experimental study; includes background, methods, key figures, and takeaways."
+  featured: true
 preview_image: /assets/images/psychonomics.gif
 assets:
   - /assets/files/Psychonomics_Poster_Final_to_Print.pptx

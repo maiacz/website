@@ -9,7 +9,8 @@ tags:
   - proposal
   - research
 summary: "Research proposal submitted for the Guthrie Prize outlining aims, methods, and expected impact."
-preview_image: /assets/images/guthrie-proposal.svg
+  featured: true
+preview_image: /assets/images/Guthrie_Prize_Research_Proposal.png
 assets:
   - /assets/files/Guthrie_Prize_Research_Proposal.docx
 ---
