@@ -20,7 +20,7 @@ permalink: /
         <a href="{{ p.url }}">{% if p.preview_image %}<img src="{{ p.preview_image }}" alt="{{ p.title }}">{% endif %}
         <h3>{{ p.title }}</h3>
         <p>{{ p.summary }}</p>
-        <p class="project-meta">Tech: {% for t in p.tech %}{{ t }}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+        <p class="project-meta">Tech: {% if p.tech %}{{ p.tech | join: ", " }}{% else %}&mdash;{% endif %}</p>
       </a>
       </div>
     {% endfor %}

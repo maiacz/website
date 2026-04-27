@@ -20,7 +20,7 @@ permalink: /projects/
           <h3>{{ p.title }}</h3>
         </a>
         <p>{{ p.summary }}</p>
-        <p class="project-meta">Tech: {% for t in p.tech %}{{ t }}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+        <p class="project-meta">Tech: {% if p.tech %}{{ p.tech | join: ", " }}{% else %}&mdash;{% endif %}</p>
       </div>
     {% endfor %}
   </div>
