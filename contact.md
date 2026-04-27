@@ -13,7 +13,7 @@ permalink: /contact/
 
 <div class="container">
   <h2>Email</h2>
-  <p>Add your preferred contact email here.</p>
+  <p><a href="mailto:maiacz@outlook.com">maiacz@outlook.com</a></p>
 
   <h2>Social</h2>
   <p><a href="https://github.com/maiacz">GitHub</a> · <a href="https://www.linkedin.com/in/maiacz">LinkedIn</a></p>
