@@ -76,5 +76,11 @@ body{background:var(--bg);color:var(--text)}
 .tag-btn.active{background:var(--accent);color:#fff;border-color:transparent}
 #tag-search{padding:.4rem .6rem;border:1px solid #e6eef6;border-radius:8px;width:100%;max-width:320px}
 
+/* PDF viewer styles */
+.pdf-embed{border-radius:12px;padding:0.75rem;background:linear-gradient(180deg,rgba(0,0,0,0.02),transparent)}
+.pdf-controls{display:flex;gap:.5rem;align-items:center;margin-bottom:.5rem}
+.pdf-controls .btn{padding:.35rem .6rem;font-size:.9rem}
+.pdf-canvas-wrap{background:var(--card);padding:8px;border-radius:8px}
+
 /* Small responsive tweaks */
-@media(max-width:640px){#theme-toggle{padding:.25rem}.tag-bar{gap:.4rem}}
+@media(max-width:640px){#theme-toggle{padding:.25rem}.tag-bar{gap:.4rem}.pdf-controls{overflow:auto}}

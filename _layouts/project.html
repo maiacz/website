@@ -16,9 +16,19 @@ layout: default
           <a class="btn" href="{{ first }}" target="_blank">Open in new tab</a>
           <a class="btn ghost" href="{{ page.url }}">Project page</a>
         </div>
-        <div class="pdf-embed" style="margin:1rem 0;">
-          <iframe src="{{ first }}" style="width:100%;height:800px;border:0;" title="{{ page.title }} PDF viewer"></iframe>
+        <div class="pdf-embed" data-pdf-url="{{ first }}" style="margin:1rem 0;">
+          <div class="pdf-controls">
+            <button id="pdf-prev" class="btn ghost">Prev</button>
+            <span id="pdf-pageno">1</span>/<span id="pdf-pages">—</span>
+            <button id="pdf-next" class="btn ghost">Next</button>
+            <button id="pdf-zoom-out" class="btn ghost">−</button>
+            <button id="pdf-zoom-in" class="btn ghost">+</button>
+            <a id="pdf-download" class="btn" href="{{ first }}" download>Download</a>
+          </div>
+          <div class="pdf-canvas-wrap"><canvas id="pdf-canvas" style="width:100%;height:auto;border:1px solid rgba(0,0,0,0.04);"></canvas></div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+        <script src="/assets/js/pdf-viewer.js" defer></script>
       {% else %}
         {% if page.preview_image %}
           <img src="{{ page.preview_image }}" alt="{{ page.title }} preview">
