@@ -1,4 +1,5 @@
 ---
+preview_alt: 'Guthrie proposal illustration'
 title: "Guthrie Prize Research Proposal"
 role: "Author"
 tech:
@@ -8,7 +9,7 @@ tags:
   - proposal
   - research
 summary: "Research proposal submitted for the Guthrie Prize outlining aims, methods, and expected impact."
-preview_image: "/assets/images/guthrie-proposal.png"
+preview_image: /assets/images/guthrie-proposal.svg
 assets:
   - /assets/files/Guthrie_Prize_Research_Proposal.docx
 ---
