@@ -10,10 +10,15 @@
 
     if(toggle){
       const icon = toggle.querySelector('.theme-icon');
+      const sub = document.getElementById('theme-sub');
       toggle.classList.toggle('is-dark', theme === 'dark');
       toggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
-      toggle.title = theme === 'dark' ? 'Switch to Sunlit vibe' : 'Switch to Midnight vibe';
+      const labelOn = 'dark mode enabled!';
+      const labelOff = 'enable dark mode!';
+      toggle.setAttribute('aria-label', theme === 'dark' ? labelOn : labelOff);
+      toggle.title = theme === 'dark' ? labelOn : labelOff;
       if(icon) icon.textContent = theme === 'dark' ? '🌙' : '☀️';
+      if(sub) sub.textContent = theme === 'dark' ? labelOn : labelOff;
       // tiny animation cue
       toggle.classList.add('anim');
       setTimeout(()=> toggle.classList.remove('anim'), 380);
