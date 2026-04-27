@@ -1,10 +1,12 @@
-name: Convert DOCX to PDF
+name: Convert Office files to PDF and generate thumbnails
 
 on:
   push:
     paths:
-      - '**/*resume*.docx'
+      - 'assets/files/**/*.docx'
+      - 'assets/files/**/*.pptx'
       - '**/*.docx'
+      - '**/*.pptx'
   workflow_dispatch: {}
 
 permissions:
@@ -24,35 +26,31 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libreoffice imagemagick ghostscript
 
-      - name: Locate DOCX
-        id: find
+      - name: Convert Office files to PDF and generate thumbnails
         run: |
-          DOCXFILE=$(ls *[Rr]esume*.docx 2>/dev/null | head -n1 || true)
-          if [ -z "$DOCXFILE" ]; then DOCXFILE=$(ls *.docx 2>/dev/null | head -n1 || true); fi
-          if [ -z "$DOCXFILE" ]; then echo "No DOCX found to convert"; exit 0; fi
-          echo "found=$DOCXFILE" >> $GITHUB_OUTPUT
-
-      - name: Convert to PDF and generate thumbnail
-        if: steps.find.outputs.found != ''
-        run: |
-          mkdir -p assets assets/images
-          libreoffice --headless --convert-to pdf "${{ steps.find.outputs.found }}" --outdir assets
-          BASENAME=$(basename "${{ steps.find.outputs.found }}" .docx)
-          if [ -f "assets/${BASENAME}.pdf" ]; then
-            # generate PNG thumbnail from first page
-            if command -v convert >/dev/null 2>&1; then
-              convert -density 150 "assets/${BASENAME}.pdf[0]" -quality 85 -resize 1200x "assets/images/${BASENAME}.png" || true
+          mkdir -p assets/files assets/images
+          set -e
+          # Convert DOCX and PPTX files in assets/files
+          for f in assets/files/*.docx assets/files/*.pptx; do
+            [ -f "$f" ] || continue
+            echo "Converting $f"
+            libreoffice --headless --convert-to pdf "$f" --outdir assets/files || true
+            BASENAME=$(basename "$f" | sed 's/\.[^.]*$//')
+            PDF="assets/files/${BASENAME}.pdf"
+            if [ -f "$PDF" ]; then
+              # generate thumbnail (first page)
+              convert -density 150 "${PDF}[0]" -quality 85 -resize 1200x "assets/images/${BASENAME}.png" || true
             fi
-            # if this looks like a resume, also copy to canonical name
-            case "$BASENAME" in
-              *resume*|*Resume*) cp "assets/${BASENAME}.pdf" assets/resume.pdf ;;
-            esac
-          fi
+          done
 
-      - name: Commit and push PDF
-        if: steps.find.outputs.found != ''
+      - name: Commit and push generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/resume.pdf || true
-          if git diff --staged --quiet; then echo "No changes to commit"; else git commit -m "Auto-convert resume DOCX to PDF [ci skip]" && git push; fi
+          git add assets/files/*.pdf assets/images/*.png || true
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-convert Office files to PDF and generate thumbnails [ci skip]" || true
+            git push || true
+          fi

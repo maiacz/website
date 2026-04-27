@@ -10,6 +10,7 @@ summary: "Poster summarizing an experimental study; includes background, methods
 featured: true
 preview_image: /assets/images/psychonomics.gif
 assets:
+  - /assets/files/Psychonomics_Poster_Final_to_Print.pdf
   - /assets/files/Psychonomics_Poster_Final_to_Print.pptx
 ---
 
