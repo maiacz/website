@@ -31,3 +31,37 @@ header{border-bottom-color:rgba(255,255,255,0.04)}
 nav.primary a{color:#9dd6ff}
 .btn.ghost{border-color:rgba(69,163,255,0.12)}
 }
+
+/* Theme variables (default light) */
+:root{
+  --bg:#ffffff;
+  --text:#0f172a;
+  --muted:#6b7280;
+  --accent:#0ea5e9;
+  --card:#f8fafc;
+}
+
+/* Dark theme override when .theme-dark present on html */
+html.theme-dark{
+  --bg:#071028;
+  --text:#e6eef6;
+  --muted:#94a3b8;
+  --accent:#45a3ff;
+  --card:#071827;
+}
+
+body{background:var(--bg);color:var(--text)}
+
+/* Header control styles */
+.header-controls{display:flex;align-items:center;gap:.5rem}
+#theme-toggle{background:transparent;border:1px solid rgba(15,23,42,0.06);padding:.35rem .5rem;border-radius:8px;cursor:pointer}
+#theme-toggle:hover{background:rgba(14,165,233,0.04)}
+
+/* Tag filter UI */
+.tag-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.tag-btn{background:transparent;border:1px solid rgba(15,23,42,0.06);padding:.25rem .5rem;border-radius:20px;cursor:pointer}
+.tag-btn.active{background:var(--accent);color:#fff;border-color:transparent}
+#tag-search{padding:.4rem .6rem;border:1px solid #e6eef6;border-radius:8px;width:100%;max-width:320px}
+
+/* Small responsive tweaks */
+@media(max-width:640px){#theme-toggle{padding:.25rem}.tag-bar{gap:.4rem}}

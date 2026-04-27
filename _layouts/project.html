@@ -33,6 +33,28 @@ layout: default
       {{ content }}
     </div>
 
+    {% if page.case_study %}
+      <section class="case-study">
+        <h2>Case study</h2>
+        {% if page.case_problem %}
+          <h3>Problem</h3>
+          <p>{{ page.case_problem }}</p>
+        {% endif %}
+        {% if page.case_approach %}
+          <h3>Approach</h3>
+          <p>{{ page.case_approach }}</p>
+        {% endif %}
+        {% if page.case_results %}
+          <h3>Results</h3>
+          <p>{{ page.case_results }}</p>
+        {% endif %}
+        {% if page.case_lessons %}
+          <h3>Lessons learned</h3>
+          <p>{{ page.case_lessons }}</p>
+        {% endif %}
+      </section>
+    {% endif %}
+
     <p class="project-meta">Tech: {% if page.tech %}{{ page.tech | join: ", " }}{% else %}&mdash;{% endif %}</p>
 
     {% if page.repo_link %}

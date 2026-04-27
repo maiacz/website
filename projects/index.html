@@ -12,9 +12,13 @@ permalink: /projects/
 </section>
 
 <div class="container">
-  <div class="projects-grid">
+  <div class="tag-bar" id="tag-bar">
+    <input id="tag-search" placeholder="Search projects..." aria-label="Search projects">
+  </div>
+
+  <div class="projects-grid" id="projects-grid">
     {% for p in site.projects %}
-      <div class="project-card">
+      <div class="project-card" data-tags="{{ p.tags | join: ',' }}" data-title="{{ p.title | downcase }}">
         {% if p.assets and p.assets.size > 0 %}
           {% assign link = p.assets[0] %}
         {% else %}

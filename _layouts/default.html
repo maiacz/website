@@ -18,6 +18,9 @@
         <a href="/resume/">Resume</a>
         <a href="/contact/">Contact</a>
       </nav>
+      <div class="header-controls">
+        <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌓</button>
+      </div>
     </div>
   </header>
   <main>
@@ -30,5 +33,7 @@
       <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }} — <a href="https://github.com/maiacz" target="_blank">GitHub</a></p>
     </div>
   </footer>
+  <script src="/assets/js/theme.js" defer></script>
+  <script src="/assets/js/projects-filter.js" defer></script>
 </body>
 </html>
