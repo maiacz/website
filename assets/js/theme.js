@@ -7,6 +7,14 @@
   function applyTheme(theme){
     if(theme === 'dark') root.classList.add('theme-dark'); else root.classList.remove('theme-dark');
     try{ localStorage.setItem(storageKey, theme); }catch(e){}
+    // update UI state
+    const controls = document.querySelector('.header-controls');
+    if(controls) controls.classList.toggle('active', theme === 'dark');
+    if(toggle) {
+      toggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+      toggle.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+      toggle.textContent = theme === 'dark' ? '🌙' : '☀️';
+    }
   }
 
   function init(){
