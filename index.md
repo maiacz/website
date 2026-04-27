@@ -4,11 +4,23 @@ title: Home
 permalink: /
 ---
 
-<section class="hero">
-  <div class="container">
-    <h1>Hi, I'm Maia Czerwonka. 👋</h1>
-    <p>I'm a University of Washington Statistics and Psychology major studying individual differences in information processing and conflict perception. I focus on data visualization, experimental design, and applied statistics. Explore my projects or download my resume!</p>
-    <p><a class="btn" href="/projects/">See projects</a> <a class="btn ghost" href="/resume/">Resume</a></p>
+<section class="hero hero-animated">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <h1 class="intro">Hi, I'm <span class="name">Maia Czerwonka</span> <span class="wave">👋</span></h1>
+      <p class="lead">I'm a University of Washington Statistics and Psychology major studying individual differences in information processing and conflict perception.</p>
+      <p class="lead-sm">Data viz • Experimental design • Applied statistics</p>
+      <p class="hero-cta"><a class="btn" href="/projects/">See projects</a> <a class="btn ghost" href="/resume/">Resume</a></p>
+    </div>
+    <div class="hero-decor" aria-hidden="true">
+      <div class="sparkles">
+        <span class="spark" style="--i:0"></span>
+        <span class="spark" style="--i:1"></span>
+        <span class="spark" style="--i:2"></span>
+        <span class="spark" style="--i:3"></span>
+        <span class="spark" style="--i:4"></span>
+      </div>
+    </div>
   </div>
 </section>
 
