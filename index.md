@@ -15,7 +15,8 @@ permalink: /
 <section class="container">
   <h2>Featured Projects</h2>
   <div class="projects-grid">
-    {% for p in site.projects limit:3 %}
+    {% assign featured = site.projects | where: "featured", true %}
+    {% for p in featured limit:3 %}
       <div class="project-card">
         {% if p.assets and p.assets.size > 0 %}
           {% assign link = p.assets[0] %}
