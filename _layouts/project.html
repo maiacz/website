@@ -8,7 +8,24 @@ layout: default
       <p class="project-meta"><strong>{{ page.role }}</strong> — {{ page.date }}</p>
     </header>
 
-    {% if page.preview_image %}
+    {% if page.assets and page.assets.size > 0 %}
+      {% assign first = page.assets[0] %}
+      {% assign ext = first | split:'.' | last | downcase %}
+      {% if ext == 'pdf' %}
+        <div class="embed-toolbar">
+          <a class="btn" href="{{ first }}" target="_blank">Open in new tab</a>
+          <a class="btn ghost" href="{{ page.url }}">Project page</a>
+        </div>
+        <div class="pdf-embed" style="margin:1rem 0;">
+          <iframe src="{{ first }}" style="width:100%;height:800px;border:0;" title="{{ page.title }} PDF viewer"></iframe>
+        </div>
+      {% else %}
+        {% if page.preview_image %}
+          <img src="{{ page.preview_image }}" alt="{{ page.title }} preview">
+        {% endif %}
+        <p><a class="btn" href="{{ first }}" target="_blank">Download asset</a></p>
+      {% endif %}
+    {% elsif page.preview_image %}
       <img src="{{ page.preview_image }}" alt="{{ page.title }} preview">
     {% endif %}
 

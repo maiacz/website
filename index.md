@@ -17,12 +17,7 @@ permalink: /
   <div class="projects-grid">
     {% for p in site.projects limit:3 %}
       <div class="project-card">
-        {% if p.assets and p.assets.size > 0 %}
-          {% assign link = p.assets[0] %}
-        {% else %}
-          {% assign link = p.url %}
-        {% endif %}
-        <a href="{{ link }}" target="_blank">{% if p.preview_image %}<img src="{{ p.preview_image }}" alt="{{ p.title }}">{% endif %}
+        <a href="{{ p.url }}">{% if p.preview_image %}<img src="{{ p.preview_image }}" alt="{{ p.title }}">{% endif %}
         <h3>{{ p.title }}</h3>
         <p>{{ p.summary }}</p>
         <p class="project-meta">Tech: {% if p.tech %}{{ p.tech | join: ", " }}{% else %}&mdash;{% endif %}</p>

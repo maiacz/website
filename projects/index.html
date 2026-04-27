@@ -15,12 +15,7 @@ permalink: /projects/
   <div class="projects-grid">
     {% for p in site.projects %}
       <div class="project-card">
-        {% if p.assets and p.assets.size > 0 %}
-          {% assign link = p.assets[0] %}
-        {% else %}
-          {% assign link = p.url %}
-        {% endif %}
-        <a href="{{ link }}" target="_blank">
+        <a href="{{ p.url }}">
           {% if p.preview_image %}<img src="{{ p.preview_image }}" alt="{{ p.title }}">{% endif %}
           <h3>{{ p.title }}</h3>
         </a>
