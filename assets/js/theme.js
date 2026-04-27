@@ -1,4 +1,4 @@
-// Theme toggle
+// Theme toggle (more playful "vibe" control)
 (function(){
   const root = document.documentElement;
   const toggle = document.getElementById('theme-toggle');
@@ -7,13 +7,16 @@
   function applyTheme(theme){
     if(theme === 'dark') root.classList.add('theme-dark'); else root.classList.remove('theme-dark');
     try{ localStorage.setItem(storageKey, theme); }catch(e){}
-    // update UI state
-    const controls = document.querySelector('.header-controls');
-    if(controls) controls.classList.toggle('active', theme === 'dark');
-    if(toggle) {
+
+    if(toggle){
+      const icon = toggle.querySelector('.theme-icon');
+      toggle.classList.toggle('is-dark', theme === 'dark');
       toggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
-      toggle.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
-      toggle.textContent = theme === 'dark' ? '🌙' : '☀️';
+      toggle.title = theme === 'dark' ? 'Switch to Sunlit vibe' : 'Switch to Midnight vibe';
+      if(icon) icon.textContent = theme === 'dark' ? '🌙' : '☀️';
+      // tiny animation cue
+      toggle.classList.add('anim');
+      setTimeout(()=> toggle.classList.remove('anim'), 380);
     }
   }
 
@@ -23,6 +26,7 @@
       saved = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
     applyTheme(saved);
+
     if(toggle){
       toggle.addEventListener('click', ()=>{
         const cur = root.classList.contains('theme-dark') ? 'dark' : 'light';
@@ -30,5 +34,6 @@
       });
     }
   }
+
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
