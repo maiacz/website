@@ -2,9 +2,7 @@
 preview_alt: 'Guthrie proposal illustration'
 title: "Guthrie Prize Research Proposal"
 role: "Author"
-tech:
-  - Research proposal
-  - Grant writing
+tech: ["Research proposal", "Grant writing"]
 tags:
   - proposal
   - research

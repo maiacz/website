@@ -2,9 +2,7 @@
 preview_alt: 'Mary Gates poster thumbnail'
 title: "Mary Gates Research Symposium Poster"
 role: "Presenter"
-tech:
-  - Poster design
-  - Research communication
+tech: ["Poster design", "Research communication"]
 tags:
   - poster
   - mary-gates

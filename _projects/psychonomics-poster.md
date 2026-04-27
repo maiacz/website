@@ -2,9 +2,7 @@
 preview_alt: 'Psychonomics poster GIF'
 title: "Psychonomics Poster"
 role: "Presenter"
-tech:
-  - Poster design
-  - Data visualization
+tech: ["Poster design", "Data visualization"]
 tags:
   - poster
   - psychonomics

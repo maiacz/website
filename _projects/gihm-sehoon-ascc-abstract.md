@@ -3,9 +3,7 @@ preview_alt: 'ASCC abstract thumbnail'
 title: "ASCC Abstract"
 date: 2025-04-01
 role: "Co-author"
-tech:
-  - Contamination control
-  - Experimental methods
+tech: ["Contamination control", "Experimental methods"]
 tags:
   - abstract
   - ASCC
