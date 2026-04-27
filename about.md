@@ -7,7 +7,7 @@ permalink: /about/
 <section class="hero">
   <div class="container">
     <h1>About</h1>
-    <p class="muted">A short bio and statement of what you do. Mention your interests, focus areas, and what you're looking for professionally.</p>
+    <p class="muted">I'm a data scientist and researcher working on data visualizations, experimental design, and applied machine learning — seeking opportunities to apply research-driven solutions.</p>
   </div>
 </section>
 
