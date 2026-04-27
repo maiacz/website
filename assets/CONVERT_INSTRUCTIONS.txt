@@ -1,0 +1,1 @@
+LibreOffice and pandoc not found. Please convert Resume copy.docx to PDF and put it at assets/resume.pdf

@@ -15,14 +15,14 @@ permalink: /
 <section class="container">
   <h2>Featured Projects</h2>
   <div class="projects-grid">
-    {% raw %}{% for p in site.projects limit:3 %}{% endraw %}
+    {% for p in site.projects limit:3 %}
       <div class="project-card">
-        <a href="{{ p.url }}">{% raw %}{% if p.preview_image %}{% endraw %}<img src="{{ p.preview_image }}" alt="{{ p.title }}">{% raw %}{% endif %}{% endraw %}
+        <a href="{{ p.url }}">{% if p.preview_image %}<img src="{{ p.preview_image }}" alt="{{ p.title }}">{% endif %}
         <h3>{{ p.title }}</h3>
         <p>{{ p.summary }}</p>
-        <p class="project-meta">Tech: {% raw %}{% for t in p.tech %}{{ t }}{% endraw %}{% raw %}{% unless forloop.last %}, {% endunless %}{% endraw %}{% raw %}{% endfor %}{% endraw %}</p>
+        <p class="project-meta">Tech: {% for t in p.tech %}{{ t }}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
       </a>
       </div>
-    {% raw %}{% endfor %}{% endraw %}
+    {% endfor %}
   </div>
 </section>
