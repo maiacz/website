@@ -1,0 +1,49 @@
+name: Convert DOCX to PDF
+
+on:
+  push:
+    paths:
+      - '**/*resume*.docx'
+      - '**/*.docx'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Install LibreOffice
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libreoffice
+
+      - name: Locate DOCX
+        id: find
+        run: |
+          DOCXFILE=$(ls *[Rr]esume*.docx 2>/dev/null | head -n1 || true)
+          if [ -z "$DOCXFILE" ]; then DOCXFILE=$(ls *.docx 2>/dev/null | head -n1 || true); fi
+          if [ -z "$DOCXFILE" ]; then echo "No DOCX found to convert"; exit 0; fi
+          echo "found=$DOCXFILE" >> $GITHUB_OUTPUT
+
+      - name: Convert to PDF
+        if: steps.find.outputs.found != ''
+        run: |
+          mkdir -p assets
+          libreoffice --headless --convert-to pdf "${{ steps.find.outputs.found }}" --outdir assets
+          BASENAME=$(basename "${{ steps.find.outputs.found }}" .docx)
+          if [ -f "assets/${BASENAME}.pdf" ]; then mv "assets/${BASENAME}.pdf" assets/resume.pdf; fi
+
+      - name: Commit and push PDF
+        if: steps.find.outputs.found != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/resume.pdf || true
+          if git diff --staged --quiet; then echo "No changes to commit"; else git commit -m "Auto-convert resume DOCX to PDF [ci skip]" && git push; fi
