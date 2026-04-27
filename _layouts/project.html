@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="project-page">
+  <h1>{{ page.title }}</h1>
+  <p><strong>{{ page.role }}</strong> — {{ page.date }}</p>
+  {% raw %}{% if page.preview_image %}{% endraw %}
+    <img src="{{ page.preview_image }}" alt="{{ page.title }} preview" style="max-width:100%;">
+  {% raw %}{% endif %}{% endraw %}
+  <p>{{ content }}</p>
+  <p>Tech: {% raw %}{% for t in page.tech %}{% endraw %}<span>{{ t }}</span>{% raw %}{% unless forloop.last %}, {% endunless %}{% endraw %}{% raw %}{% endfor %}{% endraw %}</p>
+  {% raw %}{% if page.repo_link %}{% endraw %}<p><a href="{{ page.repo_link }}" target="_blank">Repository</a></p>{% raw %}{% endif %}{% endraw %}
+  {% raw %}{% if page.live_link %}{% endraw %}<p><a href="{{ page.live_link }}" target="_blank">Live</a></p>{% raw %}{% endif %}{% endraw %}
+  {% raw %}{% if page.assets %}{% endraw %}
+    <h3>Assets</h3>
+    <ul>{% raw %}{% for a in page.assets %}{% endraw %}<li><a href="{{ a }}">{{ a }}</a></li>{% raw %}{% endfor %}{% endraw %}</ul>
+  {% raw %}{% endif %}{% endraw %}
+</article>
