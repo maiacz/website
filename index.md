@@ -7,7 +7,7 @@ permalink: /
 <section class="hero">
   <div class="container">
     <h1>Hi, I'm Maia.</h1>
-    <p>I'm a data scientist and researcher focused on data visualization, experiments, and applied machine learning. Explore my projects or download my resume.</p>
+    <p>I'm Maia — a University of Washington Statistics and Psychology major studying individual differences in information processing and conflict perception. I focus on data visualization, experimental design, and applied machine learning. Explore my projects or download my resume.</p>
     <p><a class="btn" href="/projects/">See projects</a> <a class="btn ghost" href="/resume/">Resume</a></p>
   </div>
 </section>
