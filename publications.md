@@ -22,5 +22,4 @@ permalink: /publications/
     </li>
   </ul>
 
-  <p>If you'd like, I can format these as BibTeX entries, add DOI/links, or include PDFs/abstract files you upload.</p>
 </section>
