@@ -11,7 +11,9 @@ permalink: /publications/
   <ul>
     <li>
       Han, W., et al. (October 2025). Advanced Airborne Contaminant Removal Using Photo-Ionization With CNT-Based Soft X-Ray Technology [Abstract]. Asian Symposium On Contamination Control, Seoul, South Korea.
-      <!-- If you have a PDF, upload to assets/files and I can link it here. -->
+    </li>
+    <li>
+      Czerwonka, M., Mottarella, M., & Prat, C.S. (November 2025). Exploring Individual Differences In Decision Strategy [Abstract]. Psychonomic Society 66th Annual Meeting, Denver, CO.
     </li>
   </ul>
 
