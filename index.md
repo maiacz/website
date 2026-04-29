@@ -14,9 +14,8 @@ permalink: /
 
       <div class="contact-quick" aria-label="Contact information">
         <a class="contact-item" href="mailto:maiacz@outlook.com">✉️ maiacz@outlook.com</a>
-        <span class="contact-item">📍 Seattle, WA</span>
         <a class="contact-item" href="https://www.linkedin.com/in/maiacz" target="_blank">🔗 linkedin.com/in/maiacz</a>
-        <span class="contact-item">📞 425-394-2541</span>
+        <span class="contact-item">📍 Seattle, WA</span>
       </div>
     </div>
     <div class="hero-decor" aria-hidden="true">
