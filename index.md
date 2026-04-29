@@ -11,6 +11,13 @@ permalink: /
       <p class="lead">I'm a University of Washington Statistics and Psychology major studying individual differences in information processing and conflict perception.</p>
       <p class="lead-sm">Data viz • Experimental design • Applied statistics</p>
       <p class="hero-cta"><a class="btn" href="/projects/">See projects</a> <a class="btn ghost" href="/resume/">Resume</a></p>
+
+      <div class="contact-quick" aria-label="Contact information">
+        <a class="contact-item" href="mailto:maiacz@outlook.com">✉️ maiacz@outlook.com</a>
+        <span class="contact-item">📍 Seattle, WA</span>
+        <a class="contact-item" href="https://www.linkedin.com/in/maiacz" target="_blank">🔗 linkedin.com/in/maiacz</a>
+        <span class="contact-item">📞 425-394-2541</span>
+      </div>
     </div>
     <div class="hero-decor" aria-hidden="true">
       <div class="sparkles">
