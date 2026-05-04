@@ -8,7 +8,7 @@ permalink: /resume/
   <div class="container">
     <h1>Resume</h1>
     <p class="muted">Download a PDF or view sections below.</p>
-    <p><a class="btn" href="/assets/Resume.pdf" download>Download PDF</a></p>
+    <p><a class="btn" href="{{ '/assets/Resume.pdf' | relative_url }}" download="Maia-Czerwonka-Resume.pdf" target="_blank" rel="noopener">Download PDF</a></p>
 
     <div class="resume-contact" style="margin-top:1rem;">
       <strong>Maia A. Czerwonka</strong><br>
