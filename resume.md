@@ -12,29 +12,23 @@ permalink: /resume/
 
     <div class="resume-contact" style="margin-top:1rem;">
       <strong>Maia A. Czerwonka</strong><br>
-      Seattle, WA | 425-394-2541 | <a href="mailto:maiacz@outlook.com">maiacz@outlook.com</a> | <a href="https://www.linkedin.com/in/maiacz" target="_blank">www.linkedin.com/in/maiacz</a>
+      Seattle, WA | 425-394-2541 | <a href="https://maiacz.com" target="_blank">maiacz.com</a> | <a href="mailto:maiacz@outlook.com">maiacz@outlook.com</a> | <a href="https://www.linkedin.com/in/maiacz" target="_blank">www.linkedin.com/in/maiacz</a>
     </div>
   </div>
 </section>
 
 <div class="container">
+
   <section id="education">
     <h2>Education</h2>
-    <p><strong>University of Washington, Seattle, WA</strong> — B.S. in Psychology and Statistics: Data Science (GPA: 3.75)</p>
     <p>Aug 2022 - Expected June 2026</p>
-    <ul>
-      <li>Dean’s List - Yearly: 2023, 2024; Quarterly: 2022 (Aut), 2023 (Wint, Spr, Aut), 2024 (Wint, Spr, Aut), 2025 (Spr, Aut)</li>
-      <li>Psychology Honors Program (2024-2026)</li>
-      <li>Mary Gates Research Scholar (2025)</li>
-      <li>Best Research Proposal Guthrie Prize Winner (2025)</li>
-      <li>Statistics Directed Reading Project- Multiple Testing in Genetic Research (Aut 2025)</li>
-    </ul>
+    <p><strong>Statistics Directed Reading Project — Multiple Testing in Genetic Research (2025)</strong></p>
   </section>
 
   <section id="experience">
-    <h2>Work Experience</h2>
+    <h2>Experience</h2>
 
-    <h3>Research Assistant — Exponent Inc., Bellevue, WA, USA</h3>
+    <h3>Research Assistant, Exponent Inc., Bellevue WA</h3>
     <p><em>October 2025</em></p>
     <ul>
       <li>Supported an applied research project for a leading technology client, assisting in study setup, participant coordination, and data collection.</li>
@@ -43,7 +37,7 @@ permalink: /resume/
       <li>Collaborated with senior researchers to streamline project execution and ensure high-quality data integration.</li>
     </ul>
 
-    <h3>Data Science Intern — AweXome Ray, Anyang, Gyeonggi-do, South Korea</h3>
+    <h3>Data Science Intern, AweXome Ray, Anyang, Gyeonggi-do, South Korea</h3>
     <p><em>June 2025 - August 2025</em></p>
     <ul>
       <li>Built an interactive desktop app automating air quality analysis across three sensor types, with plotting and export tools.</li>
@@ -53,15 +47,15 @@ permalink: /resume/
       <li>Partnered with engineers on heat dissipation, 3D printing, and operations support (inventory and equipment tracking).</li>
     </ul>
 
-    <h3>Student Researcher — Cognition and Cortical Dynamics Laboratory, University of Washington</h3>
+    <h3>Student Researcher, Cognition and Cortical Dynamics Laboratory, University of Washington</h3>
     <p><em>Sept 2023 – Present</em></p>
     <ul>
-      <li>Designed and completed an independent project on attentional biases in decision making under conflict in a sample of over 200 participants.</li>
+      <li>Designed and completed an independent project on attentional biases in decision making under conflict in a sample of over 200 participants, supported by a grant from the Office of Naval Research.</li>
       <li>Developed data analysis and visualization pipelines in R and Python.</li>
       <li>Disseminated findings in two institution-wide research symposia and delivered two invited lab talks.</li>
     </ul>
 
-    <h3>Research Assistant — Cognition and Cortical Dynamics Laboratory, University of Washington</h3>
+    <h3>Research Assistant, Cognition and Cortical Dynamics Laboratory, University of Washington</h3>
     <p><em>Oct 2022 - June 2024</em></p>
     <ul>
       <li>Led behavioral data collection for three multi-session studies on individual differences in cognitive abilities and learning.</li>
@@ -72,8 +66,12 @@ permalink: /resume/
 
   <section id="publications">
     <h2>Publications, Presentations, &amp; Invited Talks</h2>
+
     <h3>Publications</h3>
-    <p>Czerwonka, M., Mottarella, M., &amp; Prat, C.S. (in prep). To Be or Not to Be Biased: Investigating the Factors That Determine Attentional Bias and the Differences in Conflict Perception Between Neutral and Biased Attenders Using Drift Diffusion Modeling.</p>
+    <ul>
+      <li>Han, W, et al. (October 2025). Advanced Airborne Contaminant Removal Using Photo-Ionization With CNT-Based Soft X-Ray Technology [Abstract]. Asian Symposium On Contamination Control. Seoul, South Korea.</li>
+      <li>Czerwonka, M., Mottarella, M., &amp; Prat, C.S. To Be or Not to Be Biased: Investigating the Factors That Determine Attentional Bias and the Differences in Conflict Perception Between Neutral and Biased Attenders Using Drift Diffusion Modeling. (in prep.)</li>
+    </ul>
 
     <h3>Presentations</h3>
     <ul>
@@ -92,8 +90,8 @@ permalink: /resume/
   <section id="skills">
     <h2>Skills</h2>
     <ul>
-      <li>Programming: R (Rmarkdown, Tidyverse, ggplot2), Python (Jupyter Notebook, matplotlib), SQL (SQLite), Psytoolkit</li>
-      <li>Data Analysis/ Visualization/ Quantitative methods</li>
+      <li>Programming: R (Rmarkdown, Tidyverse), Python (Jupyter Notebook), SQL (SQLite), Psytoolkit</li>
+      <li>Data Analysis (RStudio, Microsoft Excel, jamovi) / Visualization (matplotlib, ggplot2) / Quantitative methods (Qualtrics)</li>
       <li>Experimental Design: Working with human subjects, inferential statistics, linear regression</li>
       <li>Foreign Languages: English (Native), Polish (Native), Korean (Proficient), Spanish (Proficient)</li>
     </ul>
@@ -103,7 +101,7 @@ permalink: /resume/
     <h2>Licenses &amp; Certifications</h2>
     <ul>
       <li>MRI Level 2 Safety Trained Personnel</li>
-      <li>CITI Human Subjects Learners — Credential ID 52410553</li>
+      <li>CITI Human Subjects Learners, Credential ID 52410553</li>
     </ul>
   </section>
 </div>
