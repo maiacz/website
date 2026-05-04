@@ -21,8 +21,16 @@ permalink: /resume/
 
   <section id="education">
     <h2>Education</h2>
+    <h3>B.S in Statistics, University of Washington, Seattle, WA</h3>
+    <h3>B.S in Psychology (Double Major)</h3>
     <p>Aug 2022 - Expected June 2026</p>
-    <p><strong>Statistics Directed Reading Project — Multiple Testing in Genetic Research (2025)</strong></p>
+    <ul>
+      <li>GPA: 3.75, Dean’s List (2023-2026)</li>
+      <li>Mary Gates Research Scholar (2025)</li>
+      <li>Best Research Proposal Guthrie Prize Winner (2025)</li>
+      <li>Statistics Directed Reading Project- Multiple Testing in Genetic Research</li>
+      <li> Psychology Honors Program (2024-2026) </li>
+    </ul>
   </section>
 
   <section id="experience">
