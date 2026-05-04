@@ -1,0 +1,48 @@
+name: Extract Resume Text
+on:
+  push:
+    paths:
+      - '.github/workflows/trigger_resume_extract.txt'
+      - 'assets/Resume.pdf'
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install poppler-utils
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+      - name: Extract text from PDF
+        run: |
+          pdftotext -layout assets/Resume.pdf - | sed 's/\r//' > extracted_resume.txt || true
+      - name: Build resume.md
+        run: |
+          cat > resume.md <<'EOF'
+---
+layout: default
+title: Resume
+permalink: /resume/
+---
+
+<div class="container">
+<pre>
+EOF
+          cat extracted_resume.txt >> resume.md
+          cat >> resume.md <<'EOF'
+</pre>
+</div>
+EOF
+      - name: Commit and push
+        env:
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        run: |
+          git config user.name "$GIT_COMMITTER_NAME"
+          git config user.email "$GIT_COMMITTER_EMAIL"
+          git add resume.md
+          git commit -m "Update resume.md from Resume.pdf [ci skip]" || echo "No changes to commit"
+          git push origin HEAD:main
