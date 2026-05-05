@@ -15,6 +15,7 @@ permalink: /
       <div class="contact-quick" aria-label="Contact information">
         <a class="contact-item" href="mailto:maiacz@outlook.com">✉️ maiacz@outlook.com</a>
         <a class="contact-item" href="https://www.linkedin.com/in/maiacz" target="_blank">🔗 linkedin.com/in/maiacz</a>
+        <a class="contact-item" href="https://github.com/maiacz" target="_blank">🐙 github.com/maiacz</a>
         <span class="contact-item">📍 Seattle, WA</span>
       </div>
     </div>
